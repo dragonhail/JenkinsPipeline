@@ -22,6 +22,12 @@ pipeline{
                 sh "./gradlew test jacocoTestReport"
             }
         }
+        post{
+            always{
+                mail to: "yvvpark@gmail.ccom"
+                subject: "Build Finish"
+                body: "Hello Email"
+        }
 
     }
 }
